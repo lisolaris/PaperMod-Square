@@ -1,3 +1,5 @@
+<div class="giscus"></div>
+
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
     {{- if not site.Params.footer.hideCopyright }}
@@ -18,6 +20,10 @@
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        {{if site.Params.moeICP }}
+        <br>
+        <a href="https://icp.gov.moe/?keyword={{site.Params.moeICP}}" target="_blank">萌ICP备{{site.Params.moeICP}}号</a>
+        {{end}}
     </span>
 </footer>
 {{- end }}

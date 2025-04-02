@@ -1,0 +1,52 @@
+/* Markdown表格居中 */
+table{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-content blockquote{
+  font-size: 0.9em;
+  color: var(--secondary);
+}
+
+.post-content h4{
+  font-size: 20px;
+}
+
+.post-content h5{
+  font-size: 18px;
+}
+
+/* 取消表格整体外框 */
+.post-content table {
+    border-collapse: collapse;
+    border: none; /* 移除外框 */
+}
+
+/* 仅添加单元格之间的竖分割线 */
+.post-content table th,
+.post-content table td {
+    border-left: 1px solid var(--border); /* 左边添加分隔线 */
+    border-right: 1px solid var(--border); /* 右边添加分隔线 */
+}
+
+/* 移除首列的左边框，避免多余的线 */
+.post-content table th:first-child,
+.post-content table td:first-child {
+    border-left: none;
+}
+
+/* 移除最后一列的右边框，避免多余的线 */
+.post-content table th:last-child,
+.post-content table td:last-child {
+    border-right: none;
+}
+
+.giscus{
+  /* width: var(--main-width); */
+  max-width: calc(var(--main-width) + var(--gap) * 2);
+  padding: var(--gap);
+  margin: auto;
+}
